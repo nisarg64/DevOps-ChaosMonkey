@@ -13,3 +13,5 @@ src/main/webapp/META-INF
 *.idea
 attendees.csv
 .spring*
+cronjob.out
+nohup.out

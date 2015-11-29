@@ -1,0 +1,10 @@
+stress-ng --cpu 4 --io 2 --vm 1 --vm-bytes 1G --timeout 60s --metrics-brief
+stress-ng --cpu 3 --io 3 --vm 2 --vm-bytes 1G --timeout 60s --metrics-brief
+stress-ng --cpu 2 --io 1 --vm 1 --vm-bytes 1G --timeout 60s --metrics-brief
+stress-ng --cpu 1 --io 2 --vm 2 --vm-bytes 1G --timeout 60s --metrics-brief
+stress-ng --cpu 4 --io 3 --vm 1 --vm-bytes 1G --timeout 60s --metrics-brief
+stress-ng --cpu 3 --io 1 --vm 2 --vm-bytes 1G --timeout 60s --metrics-brief
+stress-ng --cpu 2 --io 2 --vm 1 --vm-bytes 1G --timeout 60s --metrics-brief
+stress-ng --cpu 1 --io 3 --vm 2 --vm-bytes 1G --timeout 60s --metrics-brief
+stress-ng --cpu 4 --io 1 --vm 1 --vm-bytes 1G --timeout 60s --metrics-brief
+stress-ng --cpu 3 --io 2 --vm 2 --vm-bytes 1G --timeout 60s --metrics-brief
