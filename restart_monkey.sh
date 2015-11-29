@@ -1,8 +1,10 @@
-#!/bin/sh
+#!/bin/bash
 echo "------------------------------------------------------------------------------------------------"
 echo "Restart Monkey Started"
-home="/home/nisarg/devopsProject/greenhouse"
-cd $home
+PRJ_HOME=`cat config.cfg | grep PROJECT_HOME | cut -d '=' -f2`
+EMAIL_REC=`cat config.cfg | grep EMAIL_LIST | cut -d '=' -f2`
+WORKING_DIR=`pwd`
+eval cd $PRJ_HOME
 output=`ps aux|grep t7:run`
 set -- $output
 pid=$2
@@ -15,9 +17,9 @@ sleep 20
 status=`curl -s -o /dev/null -w "%{http_code}" localhost:8080`
 echo "Status of tomcat server is $status"
 if [ $status != 200 ]; then
-	echo "Tomcat Server Restart Failed" | mailx -s "(URGENT)Restart Monkey Update" ndgandh2@ncsu.edu
+	echo "Tomcat Server Restart Failed" | mailx -s "(URGENT)Restart Monkey Update" $EMAIL_REC
 else
-	echo "Tomcat Server Restart Passed" | mailx -s "Restart Monkey Update" ndgandh2@ncsu.edu
+	echo "Tomcat Server Restart Passed" | mailx -s "Restart Monkey Update" $EMAIL_REC
 fi
 
 echo "------------------------------------------------------------------------------------------------"
