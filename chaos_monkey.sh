@@ -20,7 +20,9 @@ fi
 
 # Select monkey to run
 if [ $remainder -eq 0 ]; then
+	echo "Restart Monkey Started!!"
 	ssh -t -o "StrictHostKeyChecking no" root@$HOST "./restart_monkey.sh"
 else
+	echo "Stress Monkey Started!!"
 	ssh -t -o "StrictHostKeyChecking no" root@$HOST "./stress_monkey.sh"
 fi

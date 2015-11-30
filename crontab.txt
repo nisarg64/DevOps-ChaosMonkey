@@ -1,1 +1,1 @@
-*/1 * * * * /home/ashwin_oke/DevOps-ChaosMonkey/chaos_monkey.sh >> /home/ashwin_oke/DevOps-ChaosMonkey/cronjob.out
+*/1 * * * * /home/nisarg/devopsProject/greenhouse/chaos_monkey.sh >> /home/nisarg/devopsProject/greenhouse/cronjob.out

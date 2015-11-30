@@ -16,7 +16,7 @@ ssh -o "StrictHostKeyChecking no" -t root@$HOST1 "chmod +x ~/chaos_monkey.sh"
 
 scp -o "StrictHostKeyChecking no" restart_monkey.sh root@$HOST2:~/restart_monkey.sh
 scp -o "StrictHostKeyChecking no" stress_monkey.sh root@$HOST2:~/stress_monkey.sh
-scp -o "StrictHostKeyChecking no" stress-config root@$HOST2:~/stress-config
+scp -o "StrictHostKeyChecking no" chaos_monkey.sh root@$HOST2:~/chaos_monkey.sh
 scp -o "StrictHostKeyChecking no" config.cfg root@$HOST2:~/config.cfg
 scp -o "StrictHostKeyChecking no" stress-config root@$HOST2:~/stress-config
 
