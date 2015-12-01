@@ -14,8 +14,10 @@ HOST=""
 
 if [ $remainderHost -eq 0 ]; then
 	HOST=`cat config.cfg | grep SERVER1 | cut -d '=' -f2`
+	echo "Monkey Script to be started on Host Machine : $HOST"
 else
 	HOST=`cat config.cfg | grep SERVER2 | cut -d '=' -f2`
+	echo "Monkey Script to be started on Host Machine : $HOST"
 fi
 
 # Select monkey to run

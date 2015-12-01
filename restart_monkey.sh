@@ -11,7 +11,7 @@ pid=$2
 echo "Tomcat Process Id: $pid"
 kill -9 $pid
 echo "Killed the tomcar server. Restarting tomcat."
-cmd="nohup mvn t7:run"
+cmd="nohup mvn t7:run -Djava.security.egd=file:/dev/./urandom"
 $cmd &
 sleep 20
 status=`curl -s -o /dev/null -w "%{http_code}" localhost:8080`
